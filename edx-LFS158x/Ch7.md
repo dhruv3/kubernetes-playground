@@ -4,6 +4,7 @@
 * It can be used standalone, or part of scripts and automation tools. 
 * Once all required credentials and cluster access points have been configured for kubectl it can be used remotely from 
 anywhere to access a cluster. 
+* kubectl is just a wrapper on cURL.
 
 ## Accessing Minikube: Web-based User Interface (Web UI)
 
@@ -21,3 +22,7 @@ able to interact with the API server running on the master node.
 * The configuration file(present in '.kube' directory of user's home) has all the connection details required by kubectl. 
 * By default, the kubectl binary parses this file to find the master node's connection endpoint, along with credentials.
 * Kubernetes cluster installed by Minikube the `~/.kube/config` file gets created automatically.
+
+## 'kubectl proxy' Command
+* Issuing the kubectl proxy command, kubectl authenticates with the API server on the master node.
+* Launchesthe Dashboard on a new proxy port 8001.
