@@ -27,3 +27,27 @@ often deployed as microservices.
 * An image is launched as a container, an extra writable layer is automatically added into which the record of 
 any ongoing system activity is saved.
 ![image-container](https://user-images.githubusercontent.com/13077629/61974616-97f28580-afac-11e9-8294-9a829d1eafcb.png)
+
+## AWS
+### AWS ECS
+Amazon’s EC2 Container Service (ECS) leverages specially configured EC2 instances as hosts for integrated Docker containers. You don’t have to get your hands dirty on the EC2 instance itself, as you can provision and administrate your containers through the ECS framework.
+
+### AWS Elastic Beanstalk
+AWS Elastic Beanstalk effectively sits on top of ECS. It allows you to deploy your application across all the AWS resources normally used by ECS, but with virtually all of the logistics neatly abstracted away. Effectively, all you need in order to launch a fully scalable, complex microservices environment is a declarative JSON-formatted script in a file called Dockerrun.aws.json. You can either upload your script to the GUI or, from an initialized local directory using the AWS Beanstalk CLI.
+
+## Docker Stuff
+```bash
+systemctl start docker
+docker run hello-world
+```
+* First statement will launch the Docker daemon.
+* Second statement following things happen:
+ * The Docker client contacted the Docker daemon which proceeded to download the hello-world image from the repository. 
+ * The image is converted to a running container by the docker run command whose output is streamed to our command line shell — the Docker client.
+ 
+Definitions:
+* Docker client — the command line shell activated by running docker commands
+* Docker daemon — the local Docker process we started just before with the `systemctl` command
+* Image — a file containing the data that will be used to make up an operating system
+
+
